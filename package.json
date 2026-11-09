@@ -1,0 +1,17 @@
+{
+  "name": "coach-lite",
+  "private": true,
+  "type": "module",
+  "description": "Coach Desk Lite: Telegram Mini App for coaches with on-device video analysis. See SPEC.md.",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "test": "node --experimental-strip-types --test shared/*.test.ts",
+    "check": "tsc --noEmit -p ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
