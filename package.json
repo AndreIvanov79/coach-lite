@@ -1,5 +1,6 @@
 {
   "name": "coach-lite",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
   "description": "Coach Desk Lite: Telegram Mini App for coaches with on-device video analysis. See SPEC.md.",
@@ -7,11 +8,23 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "test": "node --experimental-strip-types --test shared/*.test.ts",
-    "check": "tsc --noEmit -p ."
+    "dev": "vite --config miniapp/vite.config.ts",
+    "build": "vite build --config miniapp/vite.config.ts",
+    "preview": "vite preview --config miniapp/vite.config.ts",
+    "test": "node --experimental-strip-types --test shared/*.test.ts miniapp/src/lib/*.test.ts",
+    "check": "tsc --noEmit -p . && tsc --noEmit -p miniapp"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/node": "^22.20.5",
-    "typescript": "^5.9.3"
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "playwright": "^1.64.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.1"
   }
 }
