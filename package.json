@@ -12,7 +12,9 @@
     "build": "vite build --config miniapp/vite.config.ts",
     "preview": "vite preview --config miniapp/vite.config.ts",
     "test": "node --experimental-strip-types --test shared/*.test.ts miniapp/src/lib/*.test.ts",
-    "check": "tsc --noEmit -p . && tsc --noEmit -p miniapp"
+    "check": "tsc --noEmit -p . && tsc --noEmit -p miniapp",
+    "dictionary": "node scripts/dictionary.mjs",
+    "qa": "node scripts/qa-miniapp.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

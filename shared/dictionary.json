@@ -1,0 +1,1155 @@
+{
+ "source": "sport-coach-browser",
+ "exercises": {
+  "fitness.auto": {
+   "ru": "Автоопределение",
+   "en": "Auto-detect",
+   "ro": "Detectare automată"
+  },
+  "fitness.squat": {
+   "ru": "Приседания",
+   "en": "Squats",
+   "ro": "Genuflexiuni"
+  },
+  "fitness.lunge": {
+   "ru": "Выпады и сплит-приседы",
+   "en": "Lunges and split squats",
+   "ro": "Fandări și genuflexiuni bulgărești"
+  },
+  "fitness.hinge": {
+   "ru": "Наклоны и становые тяги",
+   "en": "Hinges and deadlifts",
+   "ro": "Aplecări și îndreptări"
+  },
+  "fitness.pull": {
+   "ru": "Тяги руками",
+   "en": "Rows",
+   "ro": "Tracțiuni la piept/talie"
+  },
+  "fitness.pullup": {
+   "ru": "Подтягивания",
+   "en": "Pull-ups",
+   "ro": "Tracțiuni la bară"
+  },
+  "fitness.press": {
+   "ru": "Жимы",
+   "en": "Presses",
+   "ro": "Împingeri"
+  },
+  "fitness.pushup": {
+   "ru": "Отжимания и брусья",
+   "en": "Push-ups and dips",
+   "ro": "Flotări și paralele"
+  },
+  "fitness.curl": {
+   "ru": "Сгибания рук",
+   "en": "Curls",
+   "ro": "Flexii ale brațelor"
+  },
+  "fitness.extension": {
+   "ru": "Разгибания рук",
+   "en": "Arm extensions",
+   "ro": "Extensii ale brațelor"
+  },
+  "fitness.raise": {
+   "ru": "Подъёмы и разведения рук",
+   "en": "Raises",
+   "ro": "Ridicări laterale/frontale"
+  },
+  "fitness.leg": {
+   "ru": "Тренажёры для ног",
+   "en": "Leg machines",
+   "ro": "Aparate pentru picioare"
+  },
+  "fitness.calf": {
+   "ru": "Подъёмы на носки",
+   "en": "Calf raises",
+   "ro": "Ridicări pe vârfuri"
+  },
+  "fitness.core": {
+   "ru": "Пресс и корпус",
+   "en": "Core and abs",
+   "ro": "Abdomen și trunchi"
+  },
+  "fitness.hold": {
+   "ru": "Статика: планка, стульчик",
+   "en": "Holds: plank, wall sit",
+   "ro": "Static: planșă, scaun la perete"
+  },
+  "fitness.cardio": {
+   "ru": "Кардио: бёрпи, скалолаз",
+   "en": "Cardio: burpees, climbers",
+   "ro": "Cardio: burpee, alpinist"
+  },
+  "boxing.auto": {
+   "ru": "Автоматически",
+   "en": "Automatic",
+   "ro": "Automat"
+  },
+  "boxing.straight": {
+   "ru": "Прямые удары",
+   "en": "Straight punches",
+   "ro": "Directe"
+  },
+  "boxing.hook": {
+   "ru": "Боковые удары",
+   "en": "Hooks",
+   "ro": "Croșee"
+  },
+  "boxing.uppercut": {
+   "ru": "Удары снизу",
+   "en": "Uppercuts",
+   "ro": "Upercuturi"
+  },
+  "boxing.combination": {
+   "ru": "Комбинации и бой с тенью",
+   "en": "Combinations and shadow boxing",
+   "ro": "Combinații și box cu umbra"
+  },
+  "boxing.bag": {
+   "ru": "Работа на мешке",
+   "en": "Bag work",
+   "ro": "Lucru la sac"
+  },
+  "boxing.mitts": {
+   "ru": "Работа на лапах",
+   "en": "Pad work",
+   "ro": "Lucru pe labe"
+  },
+  "boxing.kicks": {
+   "ru": "Удары ногами",
+   "en": "Kicks",
+   "ro": "Lovituri cu piciorul"
+  },
+  "boxing.defense": {
+   "ru": "Уклоны, нырки, защита",
+   "en": "Slips, ducks, defence",
+   "ro": "Eschive, plonjoane, apărare"
+  },
+  "boxing.footwork": {
+   "ru": "Стойка и перемещения",
+   "en": "Stance and footwork",
+   "ro": "Poziție și deplasări"
+  },
+  "rg.auto": {
+   "ru": "Автоматически",
+   "en": "Automatic",
+   "ro": "Automat"
+  },
+  "rg.routine": {
+   "ru": "Полное упражнение",
+   "en": "Full routine",
+   "ro": "Exercițiu complet"
+  },
+  "rg.element": {
+   "ru": "Элемент / тренировка",
+   "en": "Element / training",
+   "ro": "Element / antrenament"
+  },
+  "rg.balance": {
+   "ru": "Равновесия",
+   "en": "Balances",
+   "ro": "Echilibre"
+  },
+  "rg.jump": {
+   "ru": "Прыжки",
+   "en": "Leaps",
+   "ro": "Sărituri"
+  },
+  "rg.turn": {
+   "ru": "Повороты и вращения",
+   "en": "Turns and rotations",
+   "ro": "Întoarceri și rotiri"
+  },
+  "rg.shape": {
+   "ru": "Формы и амплитуда",
+   "en": "Shapes and amplitude",
+   "ro": "Forme și amplitudine"
+  },
+  "rg.wave": {
+   "ru": "Волны и наклоны",
+   "en": "Waves and bends",
+   "ro": "Unde și aplecări"
+  },
+  "rg.steps": {
+   "ru": "Шаги и связки",
+   "en": "Steps and connections",
+   "ro": "Pași și legături"
+  },
+  "rg.apparatus": {
+   "ru": "Движения с предметом",
+   "en": "Moves with apparatus",
+   "ro": "Mișcări cu obiectul"
+  },
+  "squat": {
+   "ru": "Приседания",
+   "en": "Squat",
+   "ro": "Genuflexiune"
+  },
+  "deadlift": {
+   "ru": "Становая тяга",
+   "en": "Deadlift",
+   "ro": "Îndreptare"
+  },
+  "lunge": {
+   "ru": "Выпады",
+   "en": "Lunge",
+   "ro": "Fandare"
+  },
+  "split_squat": {
+   "ru": "Сплит-присед",
+   "en": "Split squat",
+   "ro": "Genuflexiune bulgărească"
+  },
+  "good_morning": {
+   "ru": "Гуд-монинг",
+   "en": "Good morning",
+   "ro": "Good morning"
+  },
+  "pushup": {
+   "ru": "Отжимания",
+   "en": "Push-up",
+   "ro": "Flotare"
+  },
+  "pullup": {
+   "ru": "Подтягивания",
+   "en": "Pull-up",
+   "ro": "Tracțiune la bară"
+  },
+  "overhead_press": {
+   "ru": "Жим вверх",
+   "en": "Overhead press",
+   "ro": "Împins deasupra capului"
+  },
+  "bent_over_row": {
+   "ru": "Тяга в наклоне",
+   "en": "Bent-over row",
+   "ro": "Ramat din aplecat"
+  },
+  "bicep_curl": {
+   "ru": "Сгибания на бицепс",
+   "en": "Biceps curl",
+   "ro": "Flexii pentru biceps"
+  },
+  "plank": {
+   "ru": "Планка",
+   "en": "Plank",
+   "ro": "Planșă"
+  },
+  "burpee": {
+   "ru": "Бёрпи",
+   "en": "Burpee",
+   "ro": "Burpee"
+  },
+  "crunch": {
+   "ru": "Скручивания",
+   "en": "Crunch",
+   "ro": "Abdomene scurte"
+  },
+  "situp": {
+   "ru": "Подъёмы корпуса",
+   "en": "Sit-up",
+   "ro": "Ridicări de trunchi"
+  },
+  "bench_press": {
+   "ru": "Жим лёжа",
+   "en": "Bench press",
+   "ro": "Împins la bancă"
+  },
+  "chest_press": {
+   "ru": "Жим от груди",
+   "en": "Chest press",
+   "ro": "Împins la piept"
+  },
+  "lat_pulldown": {
+   "ru": "Тяга верхнего блока",
+   "en": "Lat pulldown",
+   "ro": "Tracțiuni la helcometru"
+  },
+  "cable_row": {
+   "ru": "Тяга блока к поясу",
+   "en": "Cable row",
+   "ro": "Ramat la cablu"
+  },
+  "leg_press": {
+   "ru": "Жим ногами",
+   "en": "Leg press",
+   "ro": "Presă pentru picioare"
+  },
+  "leg_extension": {
+   "ru": "Разгибания ног",
+   "en": "Leg extension",
+   "ro": "Extensii pentru picioare"
+  },
+  "leg_curl": {
+   "ru": "Сгибания ног",
+   "en": "Leg curl",
+   "ro": "Flexii pentru picioare"
+  },
+  "dip": {
+   "ru": "Брусья",
+   "en": "Dip",
+   "ro": "Paralele"
+  },
+  "tricep_pushdown": {
+   "ru": "Разгибания на трицепс",
+   "en": "Triceps pushdown",
+   "ro": "Extensii triceps la cablu"
+  },
+  "lateral_raise": {
+   "ru": "Махи в стороны",
+   "en": "Lateral raise",
+   "ro": "Ridicări laterale"
+  },
+  "front_raise": {
+   "ru": "Подъёмы перед собой",
+   "en": "Front raise",
+   "ro": "Ridicări frontale"
+  },
+  "side_plank": {
+   "ru": "Боковая планка",
+   "en": "Side plank",
+   "ro": "Planșă laterală"
+  },
+  "lying_leg_raise": {
+   "ru": "Подъёмы ног лёжа",
+   "en": "Lying leg raise",
+   "ro": "Ridicări de picioare din culcat"
+  },
+  "hanging_leg_raise": {
+   "ru": "Подъёмы ног в висе",
+   "en": "Hanging leg raise",
+   "ro": "Ridicări de picioare la bară"
+  },
+  "superman": {
+   "ru": "Супермен",
+   "en": "Superman",
+   "ro": "Superman"
+  },
+  "hyperextension": {
+   "ru": "Гиперэкстензия",
+   "en": "Hyperextension",
+   "ro": "Hiperextensie"
+  },
+  "glute_bridge": {
+   "ru": "Ягодичный мост",
+   "en": "Glute bridge",
+   "ro": "Pod pentru fesieri"
+  },
+  "hip_thrust": {
+   "ru": "Хип-траст",
+   "en": "Hip thrust",
+   "ro": "Hip thrust"
+  },
+  "kettlebell_swing": {
+   "ru": "Махи гирей",
+   "en": "Kettlebell swing",
+   "ro": "Balans cu kettlebell"
+  },
+  "mountain_climber": {
+   "ru": "Скалолаз",
+   "en": "Mountain climber",
+   "ro": "Alpinist"
+  },
+  "jumping_jack": {
+   "ru": "Джампинг-джек",
+   "en": "Jumping jack",
+   "ro": "Jumping jack"
+  },
+  "wall_sit": {
+   "ru": "Стульчик у стены",
+   "en": "Wall sit",
+   "ro": "Scaun la perete"
+  },
+  "calf_raise": {
+   "ru": "Подъёмы на носки",
+   "en": "Calf raise",
+   "ro": "Ridicări pe vârfuri"
+  }
+ },
+ "scalars": {
+  "strikes": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Удары-кандидаты",
+    "en": "Strike candidates",
+    "ro": "Lovituri candidate"
+   }
+  },
+  "armStrikes": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Руками",
+    "en": "Arms",
+    "ro": "Cu brațele"
+   }
+  },
+  "legStrikes": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Ногами",
+    "en": "Legs",
+    "ro": "Cu picioarele"
+   }
+  },
+  "guardAtStrike": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Гард второй руки при ударе",
+    "en": "Rear-hand guard while striking",
+    "ro": "Garda mâinii a doua la lovitură"
+   }
+  },
+  "guardMedian": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Обычная высота кистей",
+    "en": "Typical hand height",
+    "ro": "Înălțimea obișnuită a mâinilor"
+   }
+  },
+  "guardWorst": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Самая низкая позиция кистей",
+    "en": "Lowest hand position",
+    "ro": "Cea mai joasă poziție a mâinilor"
+   }
+  },
+  "extension": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Разгибание локтя при ударе",
+    "en": "Elbow extension at strike",
+    "ro": "Extensia cotului la lovitură"
+   }
+  },
+  "punchSpeed": {
+   "unit": "dps",
+   "digits": 0,
+   "name": {
+    "ru": "Скорость разгибания",
+    "en": "Extension speed",
+    "ro": "Viteza de extensie"
+   }
+  },
+  "rotationBest": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Разворот плеч",
+    "en": "Shoulder rotation",
+    "ro": "Rotația umerilor"
+   }
+  },
+  "stanceWidth": {
+   "unit": "ratio",
+   "digits": 2,
+   "name": {
+    "ru": "Ширина стойки",
+    "en": "Stance width",
+    "ro": "Lățimea poziției"
+   }
+  },
+  "headMovement": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Подвижность головы",
+    "en": "Head movement",
+    "ro": "Mobilitatea capului"
+   }
+  },
+  "reps": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Полные циклы",
+    "en": "Complete cycles",
+    "ro": "Cicluri complete"
+   }
+  },
+  "cycleTime": {
+   "unit": "s",
+   "digits": 2,
+   "name": {
+    "ru": "Длительность цикла",
+    "en": "Cycle duration",
+    "ro": "Durata ciclului"
+   }
+  },
+  "towardTime": {
+   "unit": "s",
+   "digits": 2,
+   "name": {
+    "ru": "К крайней точке",
+    "en": "To the extreme",
+    "ro": "Spre extremă"
+   }
+  },
+  "pauseTime": {
+   "unit": "s",
+   "digits": 2,
+   "name": {
+    "ru": "Пауза в крайней точке",
+    "en": "Pause at the extreme",
+    "ro": "Pauză în extremă"
+   }
+  },
+  "awayTime": {
+   "unit": "s",
+   "digits": 2,
+   "name": {
+    "ru": "Возврат",
+    "en": "Return",
+    "ro": "Revenire"
+   }
+  },
+  "hold": {
+   "unit": "s",
+   "digits": 1,
+   "name": {
+    "ru": "Самое долгое удержание",
+    "en": "Longest hold",
+    "ro": "Cea mai lungă menținere"
+   }
+  },
+  "trunkLean": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Наклон корпуса",
+    "en": "Trunk inclination",
+    "ro": "Înclinarea trunchiului"
+   }
+  },
+  "trunkRange": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Размах наклона корпуса",
+    "en": "Trunk inclination range",
+    "ro": "Amplitudinea înclinării"
+   }
+  },
+  "hipDepth": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Глубина таза",
+    "en": "Hip depth",
+    "ro": "Adâncimea bazinului"
+   }
+  },
+  "hipSag": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Провис таза в упоре",
+    "en": "Hip sag in support",
+    "ro": "Lăsarea bazinului în sprijin"
+   }
+  },
+  "lrAsymmetry": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Асимметрия сторон",
+    "en": "Left–right asymmetry",
+    "ro": "Asimetrie stânga–dreapta"
+   }
+  },
+  "hipAsymmetry": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Разница тазобедренных углов",
+    "en": "Hip angle difference",
+    "ro": "Diferența unghiurilor de șold"
+   }
+  },
+  "footSplit": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Разнос стоп вперёд-назад",
+    "en": "Front–back foot split",
+    "ro": "Distanța dintre labe față–spate"
+   }
+  },
+  "handsOverhead": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Руки над головой",
+    "en": "Hands overhead",
+    "ro": "Mâinile deasupra capului"
+   }
+  },
+  "bodyHorizontal": {
+   "unit": "pct",
+   "digits": 0,
+   "name": {
+    "ru": "Время в горизонтали",
+    "en": "Time horizontal",
+    "ro": "Timp în orizontală"
+   }
+  },
+  "proneSupport": {
+   "unit": "pct",
+   "digits": 0,
+   "name": {
+    "ru": "Упор руками",
+    "en": "Hand support",
+    "ro": "Sprijin pe mâini"
+   }
+  },
+  "wristTravel": {
+   "unit": "torso",
+   "digits": 2,
+   "name": {
+    "ru": "Подвижность кистей",
+    "en": "Hand travel",
+    "ro": "Mobilitatea mâinilor"
+   }
+  },
+  "elements": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Элементы",
+    "en": "Elements",
+    "ro": "Elemente"
+   }
+  },
+  "leaps": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Прыжки",
+    "en": "Leaps",
+    "ro": "Sărituri"
+   }
+  },
+  "balances": {
+   "unit": "count",
+   "digits": 0,
+   "name": {
+    "ru": "Равновесия",
+    "en": "Balances",
+    "ro": "Echilibre"
+   }
+  },
+  "rotationTurns": {
+   "unit": "turns",
+   "digits": 1,
+   "name": {
+    "ru": "Обороты во вращениях",
+    "en": "Rotation turns",
+    "ro": "Rotiri"
+   }
+  },
+  "maxSplit": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Максимальное раскрытие ног",
+    "en": "Maximum leg opening",
+    "ro": "Deschiderea maximă a picioarelor"
+   }
+  },
+  "maxLegLift": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Максимальный подъём ноги",
+    "en": "Maximum leg lift",
+    "ro": "Ridicarea maximă a piciorului"
+   }
+  },
+  "maxTrunk": {
+   "unit": "deg",
+   "digits": 0,
+   "name": {
+    "ru": "Максимальный наклон / прогиб",
+    "en": "Maximum inclination / bend",
+    "ro": "Înclinare / arcuire maximă"
+   }
+  },
+  "longestBalance": {
+   "unit": "s",
+   "digits": 1,
+   "name": {
+    "ru": "Самое долгое равновесие",
+    "en": "Longest balance",
+    "ro": "Cel mai lung echilibru"
+   }
+  },
+  "dBody": {
+   "unit": "points",
+   "digits": 2,
+   "name": {
+    "ru": "D: трудности тела",
+    "en": "D: body difficulties",
+    "ro": "D: dificultăți de corp"
+   }
+  },
+  "eDeductions": {
+   "unit": "points",
+   "digits": 2,
+   "name": {
+    "ru": "E: наблюдаемые сбавки",
+    "en": "E: observed deductions",
+    "ro": "E: penalizări observate"
+   }
+  }
+ },
+ "units": {
+  "count": {
+   "ru": "",
+   "en": "",
+   "ro": ""
+  },
+  "torso": {
+   "ru": "× торс",
+   "en": "× torso",
+   "ro": "× trunchi"
+  },
+  "deg": {
+   "ru": "°",
+   "en": "°",
+   "ro": "°"
+  },
+  "dps": {
+   "ru": "°/с",
+   "en": "°/s",
+   "ro": "°/s"
+  },
+  "ratio": {
+   "ru": "×",
+   "en": "×",
+   "ro": "×"
+  },
+  "s": {
+   "ru": "с",
+   "en": "s",
+   "ro": "s"
+  },
+  "pct": {
+   "ru": "%",
+   "en": "%",
+   "ro": "%"
+  },
+  "turns": {
+   "ru": "об.",
+   "en": "turns",
+   "ro": "rot."
+  },
+  "points": {
+   "ru": "балла",
+   "en": "pts",
+   "ro": "p."
+  }
+ },
+ "findings": {
+  "interrupted": {
+   "title": {
+    "ru": "Анализ остановлен досрочно",
+    "en": "Analysis stopped early",
+    "ro": "Analiza a fost oprită devreme"
+   },
+   "tone": "attention"
+  },
+  "low_coverage": {
+   "title": {
+    "ru": "Мало видимых точек",
+    "en": "Few visible landmarks",
+    "ro": "Puține puncte vizibile"
+   },
+   "tone": "attention"
+  },
+  "coverage_ok": {
+   "title": {
+    "ru": "Есть материал для разбора",
+    "en": "Enough material to analyse",
+    "ro": "Material suficient pentru analiză"
+   },
+   "tone": "good"
+  },
+  "athlete_auto": {
+   "title": {
+    "ru": "В кадре несколько человек",
+    "en": "Several people in frame",
+    "ro": "Mai multe persoane în cadru"
+   },
+   "tone": "info"
+  },
+  "athlete_user": {
+   "title": {
+    "ru": "Спортсмен выбран вручную",
+    "en": "Athlete chosen manually",
+    "ro": "Sportiv ales manual"
+   },
+   "tone": "info"
+  },
+  "bridged": {
+   "title": {
+    "ru": "Короткие пропуски заполнены",
+    "en": "Short gaps bridged",
+    "ro": "Goluri scurte completate"
+   },
+   "tone": "info"
+  },
+  "suspect_geometry": {
+   "title": {
+    "ru": "Нестабильная поза",
+    "en": "Unstable pose",
+    "ro": "Postură instabilă"
+   },
+   "tone": "attention"
+  },
+  "metrics_unavailable": {
+   "title": {
+    "ru": "Часть измерений недоступна",
+    "en": "Some measurements unavailable",
+    "ro": "Unele măsurători nu sunt disponibile"
+   },
+   "tone": "attention"
+  },
+  "view_front": {
+   "title": {
+    "ru": "Ракурс: спереди или сзади",
+    "en": "View: front or back",
+    "ro": "Unghi de filmare: din față sau din spate"
+   },
+   "tone": "info"
+  },
+  "view_side": {
+   "title": {
+    "ru": "Ракурс: сбоку",
+    "en": "View: side",
+    "ro": "Unghi de filmare: din lateral"
+   },
+   "tone": "info"
+  },
+  "view_oblique": {
+   "title": {
+    "ru": "Ракурс: под углом",
+    "en": "View: oblique",
+    "ro": "Unghi de filmare: oblic"
+   },
+   "tone": "info"
+  },
+  "hip_sag": {
+   "title": {
+    "ru": "Провис таза в упоре",
+    "en": "Hips sag in support",
+    "ro": "Bazinul se lasă în sprijin"
+   },
+   "tone": "attention"
+  },
+  "body_line_held": {
+   "title": {
+    "ru": "Корпус держится линией",
+    "en": "Body holds a straight line",
+    "ro": "Corpul ține linia"
+   },
+   "tone": "good"
+  },
+  "hip_sag_hold": {
+   "title": {
+    "ru": "Провис таза в планке",
+    "en": "Hips sag in the plank",
+    "ro": "Bazinul se lasă în planșă"
+   },
+   "tone": "attention"
+  },
+  "body_line_held_hold": {
+   "title": {
+    "ru": "Ровная линия в планке",
+    "en": "Straight plank line",
+    "ro": "Linie dreaptă în planșă"
+   },
+   "tone": "good"
+  },
+  "asymmetry": {
+   "title": {
+    "ru": "Асимметрия сторон",
+    "en": "Left–right asymmetry",
+    "ro": "Asimetrie stânga–dreapta"
+   },
+   "tone": "attention"
+  },
+  "symmetric": {
+   "title": {
+    "ru": "Стороны работают симметрично",
+    "en": "Both sides work symmetrically",
+    "ro": "Părțile lucrează simetric"
+   },
+   "tone": "good"
+  },
+  "incomplete_elbow_rom": {
+   "title": {
+    "ru": "Руки не разгибаются до конца",
+    "en": "Arms do not extend fully",
+    "ro": "Brațele nu se extind complet"
+   },
+   "tone": "attention"
+  },
+  "full_elbow_rom": {
+   "title": {
+    "ru": "Полная амплитуда рук",
+    "en": "Full arm range",
+    "ro": "Amplitudine completă a brațelor"
+   },
+   "tone": "good"
+  },
+  "exercise_conflict": {
+   "title": {
+    "ru": "Геометрия не совпадает с выбором",
+    "en": "Geometry does not match the selection",
+    "ro": "Geometria nu corespunde alegerii"
+   },
+   "tone": "attention"
+  },
+  "exercise_ambiguous": {
+   "title": {
+    "ru": "Упражнение не определено однозначно",
+    "en": "Exercise is ambiguous",
+    "ro": "Exercițiul este ambiguu"
+   },
+   "tone": "info"
+  },
+  "tempo_varies": {
+   "title": {
+    "ru": "Темп меняется",
+    "en": "Tempo varies",
+    "ro": "Ritmul variază"
+   },
+   "tone": "attention"
+  },
+  "no_cycles": {
+   "title": {
+    "ru": "Полный цикл не подтверждён",
+    "en": "No complete cycle confirmed",
+    "ro": "Niciun ciclu complet confirmat"
+   },
+   "tone": "info"
+  },
+  "hold": {
+   "title": {
+    "ru": "Удержание позы",
+    "en": "Hold",
+    "ro": "Menținere"
+   },
+   "tone": "info"
+  },
+  "view_front_for_symmetry": {
+   "title": {
+    "ru": "Симметрию сторон не оцениваем",
+    "en": "Symmetry not assessed",
+    "ro": "Simetria nu se evaluează"
+   },
+   "tone": "info"
+  },
+  "guard_drop": {
+   "title": {
+    "ru": "Вторая рука опускается при ударе",
+    "en": "Rear hand drops while striking",
+    "ro": "A doua mână coboară la lovitură"
+   },
+   "tone": "attention"
+  },
+  "guard_held": {
+   "title": {
+    "ru": "Гард держится",
+    "en": "Guard is kept",
+    "ro": "Garda este menținută"
+   },
+   "tone": "good"
+  },
+  "guard_low": {
+   "title": {
+    "ru": "Руки ниже подбородка",
+    "en": "Hands below the chin",
+    "ro": "Mâinile sub bărbie"
+   },
+   "tone": "attention"
+  },
+  "guard_kept": {
+   "title": {
+    "ru": "Руки у лица",
+    "en": "Hands at the face",
+    "ro": "Mâinile la față"
+   },
+   "tone": "good"
+  },
+  "straight_standing_leg": {
+   "title": {
+    "ru": "Опорная нога прямая при ударе ногой",
+    "en": "Straight standing leg when kicking",
+    "ro": "Piciorul de sprijin întins la lovitura cu piciorul"
+   },
+   "tone": "attention"
+  },
+  "incomplete_extension": {
+   "title": {
+    "ru": "Неполное разгибание в прямых",
+    "en": "Straight punches not fully extended",
+    "ro": "Directele nu sunt extinse complet"
+   },
+   "tone": "attention"
+  },
+  "strong_rotation": {
+   "title": {
+    "ru": "Корпус вкладывается в удар",
+    "en": "The body drives the strike",
+    "ro": "Trunchiul participă la lovitură"
+   },
+   "tone": "good"
+  },
+  "fast_full_punches": {
+   "title": {
+    "ru": "Быстрые прямые с полным разгибанием",
+    "en": "Fast, fully extended punches",
+    "ro": "Directe rapide, complet extinse"
+   },
+   "tone": "good"
+  },
+  "stance_too_wide": {
+   "title": {
+    "ru": "Стойка слишком широкая",
+    "en": "Stance too wide",
+    "ro": "Poziție prea largă"
+   },
+   "tone": "attention"
+  },
+  "stance_too_narrow": {
+   "title": {
+    "ru": "Стойка слишком узкая",
+    "en": "Stance too narrow",
+    "ro": "Poziție prea îngustă"
+   },
+   "tone": "attention"
+  },
+  "head_static": {
+   "title": {
+    "ru": "Голова почти не двигается",
+    "en": "The head barely moves",
+    "ro": "Capul aproape nu se mișcă"
+   },
+   "tone": "attention"
+  },
+  "head_moves": {
+   "title": {
+    "ru": "Голова работает",
+    "en": "Head movement present",
+    "ro": "Capul lucrează"
+   },
+   "tone": "info"
+  },
+  "no_strikes": {
+   "title": {
+    "ru": "Ударов не найдено",
+    "en": "No strikes found",
+    "ro": "Nu s-au găsit lovituri"
+   },
+   "tone": "info"
+  },
+  "speed_needs_30fps": {
+   "title": {
+    "ru": "Скорость ударов не оценивается",
+    "en": "Strike speed not assessed",
+    "ro": "Viteza loviturilor nu se evaluează"
+   },
+   "tone": "info"
+  },
+  "rg_no_body": {
+   "title": {
+    "ru": "Не удалось определить опору",
+    "en": "Support could not be determined",
+    "ro": "Sprijinul nu a putut fi determinat"
+   },
+   "tone": "attention"
+  },
+  "rg_split_small": {
+   "title": {
+    "ru": "Шпагат: малый недотяг",
+    "en": "Split: slightly short",
+    "ro": "Sfoară: abatere mică"
+   },
+   "tone": "attention"
+  },
+  "rg_split_medium": {
+   "title": {
+    "ru": "Шпагат: средний недотяг",
+    "en": "Split: moderately short",
+    "ro": "Sfoară: abatere medie"
+   },
+   "tone": "attention"
+  },
+  "rg_split_large": {
+   "title": {
+    "ru": "Шпагат: большой недотяг",
+    "en": "Split: well short",
+    "ro": "Sfoară: abatere mare"
+   },
+   "tone": "attention"
+  },
+  "rg_balance_short": {
+   "title": {
+    "ru": "Равновесие меньше 1 с",
+    "en": "Balance held under 1 s",
+    "ro": "Echilibru sub 1 s"
+   },
+   "tone": "attention"
+  },
+  "rg_balance_held": {
+   "title": {
+    "ru": "Равновесие зафиксировано",
+    "en": "Balance fixed",
+    "ro": "Echilibru fixat"
+   },
+   "tone": "good"
+  },
+  "rg_rotation": {
+   "title": {
+    "ru": "Вращения",
+    "en": "Rotations",
+    "ro": "Rotiri"
+   },
+   "tone": "info"
+  },
+  "rg_static": {
+   "title": {
+    "ru": "Статичная гимнастка",
+    "en": "Static gymnast",
+    "ro": "Gimnastă statică"
+   },
+   "tone": "attention"
+  },
+  "rg_missing_group": {
+   "title": {
+    "ru": "Нет трудностей одной из групп",
+    "en": "A difficulty group is missing",
+    "ro": "Lipsește o grupă de dificultăți"
+   },
+   "tone": "attention"
+  },
+  "rg_max_split": {
+   "title": {
+    "ru": "Максимальное раскрытие ног",
+    "en": "Maximum leg opening",
+    "ro": "Deschidere maximă"
+   },
+   "tone": "info"
+  }
+ }
+}

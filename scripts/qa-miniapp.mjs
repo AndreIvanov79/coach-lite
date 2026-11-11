@@ -123,20 +123,66 @@ await page.waitForSelector("h1:text('Sportivi')");
 await page.waitForFunction(() => JSON.parse(window.__tg.cloud().profile).mode === "coach");
 console.log("offline: queued, shown, sent when back online and after a restart");
 
-// A summary from the analyzer (Self-training, then a damaged link).
-const summary = toSummary({ id: "3f2a9c4e-8b1d-4e6f-9a2b-7c5d1e0f4a6b", sport: "boxing", exercise: "auto", createdAt: "2026-11-11T10:33:00Z", duration: 20.9, coverage: 1, count: 24,
-  scalars: [{ id: "strikes", value: 24 }, { id: "guardAtStrike", value: -0.35 }, { id: "extension", value: 172 }], findings: [{ code: "guard_drop", kind: "fault", tone: "attention", focus: true }] });
-const { param } = await encodeSummary(summary);
-await page.goto(base + "?mock&lang=ru&platform=android&startapp=" + param);
+// A summary from the analyzer arrives in the Romanian Coach session: preview, nothing saved without a tap.
+const boxing = (id, minute, values) => encodeSummary(toSummary({ id, sport: "boxing", exercise: "bag", createdAt: new Date(Date.UTC(2026, 10, 11, 10, minute)), duration: 20.9, coverage: 1, count: values[0],
+  scalars: [{ id: "strikes", value: values[0] }, { id: "guardAtStrike", value: values[1], digits: 2 }, { id: "extension", value: values[2], digits: 0 }],
+  findings: [{ code: "guard_drop", kind: "fault", tone: "attention", focus: true }, { code: "strong_rotation", kind: "strength", tone: "good" }] }, values[3] ? { athlete: values[3] } : {})).then(e => e.param);
+await page.goto(base + "?mock&lang=ru&platform=android&startapp=" + await boxing("3f2a9c4e-8b1d-4e6f-9a2b-7c5d1e0f4a6b", 33, [24, -0.35, 172]));
 await page.waitForSelector("h1:text('Analiză primită')");
 assert.match(await page.textContent(".summary"), /Lovituri: 24/);
 assert.ok(await backVisible(page));
-await shot(page, "7-received");
-await page.click("button:has-text('Gata')");
+await page.evaluate(() => window.__tg.back());
 await page.waitForSelector("h1:text('Sportivi')");
+assert.ok(!Object.keys(await cloud(page)).some(k => k.startsWith("self_")), "nothing saved without the tap");
 await page.goto(base + "?mock&lang=ru&startapp=r1_AAAA");
 await page.waitForSelector("text=deteriorat");
-console.log("summary from the analyzer: shown, nothing saved; damaged link refused");
+console.log("summary from the analyzer: preview only; damaged link refused");
+
+// My progress (new user, Russian): the first summary arrives before setup, is saved, a second one makes a chart.
+{
+  const p = await phone();
+  const first = await boxing("a1111111-1111-4111-8111-111111111111", 10, [18, -0.52, 158]);
+  await p.goto(base + "?mock&lang=ru&platform=android&user=3&startapp=" + first);
+  await p.click("button:has-text('Принимаю')");
+  await p.click(".mode-card >> text=Self-training");
+  await p.waitForSelector("h1:text('Получен разбор')");
+  const text = await p.textContent(".screen");
+  for (const s of ["Работа на мешке", "Ударов: 18", "Вторая рука опускается при ударе", "Корпус вкладывается в удар", "Гард второй руки при ударе", "−0,52 × торс", "158°"]) assert.ok(text.includes(s), "shows " + s);
+  await shot(p, "7-received");
+  await p.click("button:has-text('Сохранить в «Мой прогресс»')");
+  await p.click("button:has-text('Открыть')");
+  await p.waitForSelector("text=График появится, когда будет хотя бы два разбора");
+  await p.goto(base + "?mock&lang=ru&platform=android&user=3&startapp=" + await boxing("b2222222-2222-4222-8222-222222222222", 50, [26, -0.21, 171]));
+  await p.click("button:has-text('Сохранить в «Мой прогресс»')");
+  await p.click("button:has-text('Открыть')");
+  await p.waitForSelector("svg.chart");
+  assert.equal(await p.locator("svg.chart circle").count(), 2);
+  assert.match(await p.textContent(".chart-card h3"), /Гард второй руки при ударе/);
+  await p.click("button.figure:has-text('Разгибание локтя при ударе')");
+  assert.match(await p.textContent(".chart-card h3"), /Разгибание локтя/);
+  await p.evaluate(() => scrollTo(0, 0));
+  await shot(p, "8-detail-chart");
+  await p.evaluate(() => window.__tg.back());
+  await p.waitForSelector("text=Разборов: 2");
+  await shot(p, "9-progress");
+  // The same link again: already saved. An athlete's summary: not saved until athletes exist.
+  await p.goto(base + "?mock&lang=ru&user=3&startapp=" + first);
+  await p.waitForSelector("text=Этот разбор уже сохранён.");
+  await p.goto(base + "?mock&lang=ru&user=3&startapp=" + await boxing("c3333333-3333-4333-8333-333333333333", 55, [20, -0.3, 165, "Ab12Cd34"]));
+  await p.waitForSelector("text=Это разбор для ученика");
+  assert.equal(await p.locator("button:has-text('Сохранить')").count(), 0);
+  // Delete one.
+  await p.evaluate(() => window.__tg.back());
+  await p.click("button.item >> nth=0");
+  await p.click("button:has-text('Удалить разбор')");
+  await p.waitForSelector("text=Разборов: 1");
+  const keys = await cloud(p);
+  assert.deepEqual(Object.keys(keys).filter(k => k.startsWith("self_")), ["self_1"]);
+  assert.equal(JSON.parse(keys.self_1).items.length, 1);
+  assert.ok(!keys.self_1.includes("Ab12Cd34"));
+  await p.context().close();
+  console.log("My progress: saved after the tap, once; chart of any figure; athlete summaries wait; delete");
+}
 
 // Telegram Desktop: the analyzer opens in the default browser (no try_browser).
 {
@@ -149,7 +195,7 @@ console.log("summary from the analyzer: shown, nothing saved; damaged link refus
   const l = (await opened(desk)).at(-1);
   assert.equal(l.url, "https://andreivanov79.github.io/Sport-coach-browser/rg/#coach=1&ret=coach_desk_lite_bot");
   assert.equal(l.options, null);
-  await shot(desk, "8-light-en");
+  await shot(desk, "10-light-en");
   await desk.context().close();
   console.log("Telegram Desktop: default browser; light theme");
 }
